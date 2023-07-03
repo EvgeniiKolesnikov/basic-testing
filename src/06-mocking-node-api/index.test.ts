@@ -88,7 +88,7 @@ describe('readFileAsynchronously', () => {
   test('should return null if file does not exist', async () => {
     const pathToFile = '/nofile.txt';
     const file = await readFileAsynchronously(pathToFile);
-    expect(file).toBe(null);
+    expect(file).toBeNull();
   });
 
   test('should return file content if file exists', async () => {

@@ -49,17 +49,17 @@ describe('simpleCalculator tests', () => {
 
   test('should return null for invalid action', () => {
     const unknownAction: unknown = 'unknownAction';
-    expect(simpleCalculator({ a: 1, b: 1, action: unknownAction })).toBe(null);
+    expect(simpleCalculator({ a: 1, b: 1, action: unknownAction })).toBeNull();
   });
 
   test('should return null for invalid arguments', () => {
     const unknownA: unknown = 'unknownA';
     const unknownB: unknown = 'unknownB';
-    expect(simpleCalculator({ a: unknownA, b: 1, action: Action.Add })).toBe(
-      null,
-    );
-    expect(simpleCalculator({ a: 2, b: unknownB, action: Action.Divide })).toBe(
-      null,
-    );
+    expect(
+      simpleCalculator({ a: unknownA, b: 1, action: Action.Add }),
+    ).toBeNull();
+    expect(
+      simpleCalculator({ a: 2, b: unknownB, action: Action.Divide }),
+    ).toBeNull();
   });
 });
